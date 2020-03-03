@@ -1,4 +1,4 @@
-aws codedeploy create-deployment \
---application-name Devops_front \
---deployment-group-name Devops_front \
---github-location repository=[repository]
+aws deploy create-deployment \
+--application-name Devops_back \
+--deployment-group-name Devops_back \
+--github-location repository=repository,commitId=commitId
