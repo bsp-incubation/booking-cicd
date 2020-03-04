@@ -1,26 +1,22 @@
 version: 0.0
 os: linux
 files:
-  - source: 
-    destination: 
+  - source: ./
+    destination: /home/ec2-user/front/
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
+    - location: scripts/beforeInstall.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location:
-      timeout:
-      runas:
-  ApplicationStart:
-    - location:
-      timeout:
-      runas:
-  ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/afterInstall.sh
       timeout: 300
       runas: root
-
+  ApplicationStart:
+    - location: scripts/applicationStart.sh
+      timeout: 300
+      runas: root
+      #  ValidateService:
+      #    - location:
+      #      timeout:
+      #      runas:
