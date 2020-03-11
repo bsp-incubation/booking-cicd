@@ -1,0 +1,6 @@
+[submodule "booking-cicd-front"]
+	path = booking-cicd-front
+	url = https://github.com/bsp-incubation/booking-cicd-front
+[submodule "booking-cicd-back"]
+	path = booking-cicd-back
+	url = https://github.com/bsp-incubation/booking-cicd-back
